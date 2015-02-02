@@ -9,7 +9,7 @@ var ajax = require('ajax');
 var Vector2 = require('vector2');
 
 var width = 3;
-var currentXPos = 23;
+var currentXPos = 10;
 var yPos = 54;
 var maxHeight = 110;
 var maxTemp = 0;
@@ -70,7 +70,7 @@ var getRectBar = function(yVal) {
     backgroundColor: 'black'
   });
 
-  currentXPos += width + 1;
+  currentXPos += width + 2;
   
   return rectBar;
 };
@@ -83,7 +83,7 @@ ajax(
   },
   function(data) {
     // Create an array of Menu items
-    var menuItems = parseFeed(data, 10);
+    var menuItems = parseFeed(data, 25);
     
     scalar = Math.round(maxTemp * 1.1);
     
